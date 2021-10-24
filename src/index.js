@@ -1,7 +1,7 @@
 /*
  * @Author: shitao
  * @Date: 2021-10-19 21:19:18
- * @LastEditTime: 2021-10-19 21:46:06
+ * @LastEditTime: 2021-10-24 12:59:44
  * @LastEditors: shitao
  * @Description: 
  * @FilePath: \ywhzapp\src\index.js
@@ -10,9 +10,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Home from './Home/index.jsx';
+import App from './App.js';
 
 ReactDOM.render(
-    <Home />,
+    <App />,
   document.getElementById('root')
 );

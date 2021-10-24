@@ -4,9 +4,8 @@
   background: @template-nav-bg-color;
   width: 100%;
   z-index: 1;
-  box-shadow: 0 5px 8px fade(#000, 15);
-  position: relative;
-  top: 0;
+  position: fixed;
+  top: 60px;
 
   .home-page {
     padding: 0 24px;
@@ -29,12 +28,17 @@
   }
 
   &-menu {
-    float: right;
-
+    right: 0px;
+    left: 0px;
+    margin: auto;
+    width: 610px;
     .ant-menu {
-      line-height: 62px;
-      height: 64px;
+      line-height: 22px;
+      height: 24px;
+      .ant-divider-vertical {
 
+        border-left: 1px solid #fff;
+    }
       a {
         display: block;
       }
@@ -184,4 +188,15 @@
       line-height: 40px;
     }
   }
+}
+.ant-menu.ant-menu-dark {
+  background: transparent;
+}
+
+.ant-menu-dark.ant-menu-horizontal > .ant-menu-item {
+  padding: 0px 10px;
+}
+
+.ant-menu-dark .ant-menu-item > span > a {
+  color: rgba(255, 255, 255, 0.85);
 }

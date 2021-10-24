@@ -1,3 +1,12 @@
+/**
+ * @Author: shitao
+ * @Date: 2021-10-19 21:21:50
+ * @LastEditTime: 2021-10-23 20:28:24
+ * @LastEditors: shitao
+ * @Description: 
+ * @FilePath: \ywhzapp\src\Home\Banner1.jsx
+ * @无锡四维时空信息科技有限公司
+ */
 import React from 'react';
 import { Button } from 'antd';
 import { DownOutlined } from '@ant-design/icons';
@@ -36,12 +45,6 @@ class Banner extends React.PureComponent {
                 title.children
               )}
             </div>
-            <div key="content" {...content}>
-              {content.children}
-            </div>
-            <Button ghost key="button" {...button}>
-              {button.children}
-            </Button>
           </QueueAnim>
         </Element>
       );

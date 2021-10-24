@@ -1,8 +1,18 @@
+/**
+ * @Author: shitao
+ * @Date: 2021-10-19 21:21:50
+ * @LastEditTime: 2021-10-24 12:03:26
+ * @LastEditors: shitao
+ * @Description: 
+ * @FilePath: \ywhzapp\src\Home\Feature1.jsx
+ * @无锡四维时空信息科技有限公司
+ */
 import React from 'react';
 import QueueAnim from 'rc-queue-anim';
 import TweenOne from 'rc-tween-one';
 import { Row, Col } from 'antd';
 import OverPack from 'rc-scroll-anim/lib/ScrollOverPack';
+import infopng from './assets/info3.png'
 
 function Content1(props) {
   const { ...tagProps } = props;
@@ -33,35 +43,10 @@ function Content1(props) {
           animation={animType.one}
           resetStyle
           {...dataSource.imgWrapper}
-          component={Col}
-          componentProps={{
-            md: dataSource.imgWrapper.md,
-            xs: dataSource.imgWrapper.xs,
-          }}
         >
-          <span {...dataSource.img}>
-            <img src={dataSource.img.children} width="100%" alt="img" />
-          </span>
+          <img src={infopng} style={{width:700}} alt="img" />
         </TweenOne>
-        <QueueAnim
-          key="text"
-          type={animType.queue}
-          leaveReverse
-          ease={['easeOutQuad', 'easeInQuad']}
-          {...dataSource.textWrapper}
-          component={Col}
-          componentProps={{
-            md: dataSource.textWrapper.md,
-            xs: dataSource.textWrapper.xs,
-          }}
-        >
-          <h2 key="h1" {...dataSource.title}>
-            {dataSource.title.children}
-          </h2>
-          <div key="p" {...dataSource.content}>
-            {dataSource.content.children}
-          </div>
-        </QueueAnim>
+ 
       </OverPack>
     </div>
   );

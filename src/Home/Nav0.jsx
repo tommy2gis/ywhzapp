@@ -1,6 +1,6 @@
 import React from 'react';
 import TweenOne from 'rc-tween-one';
-import { Menu } from 'antd';
+import { Menu,Divider } from 'antd';
 import { getChildrenToRender } from './utils';
 
 const { Item, SubMenu } = Menu;
@@ -28,6 +28,7 @@ class Header extends React.Component {
       const { children: a, subItem, ...itemProps } = item;
       if (subItem) {
         return (
+          
           <SubMenu
             key={item.name}
             {...itemProps}
@@ -36,35 +37,22 @@ class Header extends React.Component {
                 {...a}
                 className={`header0-item-block ${a.className}`.trim()}
               >
+               
                 {a.children.map(getChildrenToRender)}
               </div>
             }
             popupClassName="header0-item-child"
           >
-            {subItem.map(($item, ii) => {
-              const { children: childItem } = $item;
-              const child = childItem.href ? (
-                <a {...childItem}>
-                  {childItem.children.map(getChildrenToRender)}
-                </a>
-              ) : (
-                <div {...childItem}>
-                  {childItem.children.map(getChildrenToRender)}
-                </div>
-              );
-              return (
-                <Item key={$item.name || ii.toString()} {...$item}>
-                  {child}
-                </Item>
-              );
-            })}
           </SubMenu>
         );
       }
       return (
         <Item key={item.name} {...itemProps}>
           <a {...a} className={`header0-item-block ${a.className}`.trim()}>
+          <Divider type="vertical" />
+
             {a.children.map(getChildrenToRender)}
+            <Divider type="vertical" />
           </a>
         </Item>
       );
@@ -81,12 +69,6 @@ class Header extends React.Component {
           {...dataSource.page}
           className={`${dataSource.page.className}${phoneOpen ? ' open' : ''}`}
         >
-          <TweenOne
-            animation={{ x: -30, type: 'from', ease: 'easeOutQuad' }}
-            {...dataSource.logo}
-          >
-            <img width="100%" src={dataSource.logo.children} alt="img" />
-          </TweenOne>
           {isMobile && (
             <div
               {...dataSource.mobileMenu}
