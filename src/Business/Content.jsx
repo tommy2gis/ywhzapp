@@ -1,7 +1,7 @@
 /**
  * @Author: shitao
  * @Date: 2021-10-24 13:39:47
- * @LastEditTime: 2021-10-24 13:51:23
+ * @LastEditTime: 2021-10-24 21:56:33
  * @LastEditors: shitao
  * @Description: 
  * @FilePath: \ywhzapp\src\Business\Content.jsx
@@ -17,6 +17,11 @@ const { TabPane } = Tabs;
 export default function Content() {
     return (
         <div className="content_div">
+             <div className="breadcrumb">
+                <div style={{fontSize:20,fontWeight:600}}>业务范围</div>
+                <div style={{margin:34}}>{`当前位置：网站首页 > 业务范围`}</div>
+            </div>
+             <div style={{maxWidth:1200,margin:'30px auto'}}>
              <Tabs defaultActiveKey="1" centered>
                 <TabPane tab="质量管理认证" key="1">
                 <List
@@ -70,6 +75,8 @@ export default function Content() {
                 />
                 </TabPane>
             </Tabs>
+             </div>
+             
         </div>
     )
 }

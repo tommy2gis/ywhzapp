@@ -2,6 +2,7 @@ import React from 'react';
 import TweenOne from 'rc-tween-one';
 import { Menu,Divider } from 'antd';
 import { getChildrenToRender } from './utils';
+import { NavLink, withRouter } from "react-router-dom";
 
 const { Item, SubMenu } = Menu;
 
@@ -48,12 +49,12 @@ class Header extends React.Component {
       }
       return (
         <Item key={item.name} {...itemProps}>
-          <a {...a} className={`header0-item-block ${a.className}`.trim()}>
+          <NavLink  {...a} to={a.href} className={`header0-item-block ${a.className}`.trim()}>
           <Divider type="vertical" />
 
             {a.children.map(getChildrenToRender)}
             <Divider type="vertical" />
-          </a>
+          </NavLink>
         </Item>
       );
     });
@@ -114,4 +115,4 @@ class Header extends React.Component {
   }
 }
 
-export default Header;
+export default withRouter(Header);
