@@ -1,10 +1,10 @@
 /**
  * @Author: shitao
  * @Date: 2021-10-24 13:04:55
- * @LastEditTime: 2021-10-26 21:17:53
+ * @LastEditTime: 2021-10-26 21:52:16
  * @LastEditors: shitao
  * @Description:
- * @FilePath: \ywhzapp\src\News\Banner.jsx
+ * @FilePath: \ywhzapp\src\Guest\Banner.jsx
  * @无锡四维时空信息科技有限公司
  */
 import "rc-banner-anim/assets/index.css";
@@ -28,13 +28,13 @@ class Banner extends React.PureComponent {
             <div
               className="banner-anim-elem banner-user-elem"
             >
-              <div className="bg bknews"></div>
+              <div className="bg bkguest"></div>
               <div className="banner1-text-wrapper">
                 <div
                   className="banner1-title"
                   style={{fontSize:46,width:800,letterSpacing:2,marginTop:70}}
                 >
-                  运帷汇质提供专业支持和辅导
+                  帮助企业梳理核心流程，聚焦核心过程和增值过程促进管理流程优化，提升企业管理效率
                 </div>
               </div>
             </div>

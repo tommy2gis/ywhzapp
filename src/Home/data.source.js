@@ -8,7 +8,7 @@ export const Nav00DataSource = {
       {
         name: 'item0',
         className: 'header0-item',
-        href: '/news',
+        href: '/',
         children: {
           href: '/',
           children: [{ children: '首页', name: 'text',link:'/' }],
@@ -17,36 +17,36 @@ export const Nav00DataSource = {
       {
         name: 'item1',
         className: 'header0-item',
-        href: '/news',
+        href: '/',
         children: {
           href: '/business',
-          children: [{ children: '业务范围', name: 'text',link:'/business' }],
+          children: [{ children: '业务范围', name: 'text',link:'/' }],
         },
       },
       {
         name: 'item2',
         className: 'header0-item',
-        href: '/news',
+        href: '/',
         children: {
-          href: '#',
+          href: '/guest',
           children: [{ children: '客户案例', name: 'text',link:'/' }],
         },
       },
       {
         name: 'item3',
         className: 'header0-item',
-        href: '/news',
+        href: '/',
         children: {
           href: '/news',
-          children: [{ children: '新闻中心', name: 'text',link:'/news' }],
+          children: [{ children: '新闻中心', name: 'text',link:'/' }],
         },
       },
       {
         name: 'item4',
         className: 'header0-item',
-        href: '/news',
+        href: '/',
         children: {
-          href: '#',
+          href: '/contact',
           children: [{ children: '联系我们', name: 'text',link:'/' }],
         },
       },

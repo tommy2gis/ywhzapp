@@ -11,6 +11,8 @@ class Header extends React.Component {
     super(props);
     this.state = {
       phoneOpen: undefined,
+      background:'rgba(0, 19, 34, 0)',
+      mtop:40
     };
   }
 
@@ -20,6 +22,43 @@ class Header extends React.Component {
       phoneOpen,
     });
   };
+
+  handler = function () {
+    let scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+    if (scrollTop < 200) {
+      this.setState({
+        background: 'rgba(0, 19, 34, 0)',
+        mtop:40
+        
+      });
+    } else {
+      this.setState({
+        background: 'radial-gradient(circle, #353943, #2b303b)',
+        mtop:0
+      });
+    }
+  };
+
+  componentDidMount() {
+    this.regScroll(this.handler.bind(this));
+  }
+
+
+  componentWillUnmount() {
+    window.onscroll = '';
+  }
+  //添加事件监听
+  regScroll = (myHandler) => {
+    if (window.onscroll === null) {
+      window.onscroll = myHandler
+    } else if (typeof window.onscroll === 'function') {
+      var oldHandler = window.onscroll;
+      window.onscroll = function () {
+        myHandler();
+        oldHandler();
+      }
+    }
+  }
 
   render() {
     const { dataSource, isMobile, ...props } = this.props;
@@ -62,6 +101,7 @@ class Header extends React.Component {
     return (
       <TweenOne
         component="header"
+        style={{ background: this.state.background,top:this.state.mtop }}
         animation={{ opacity: 0, type: 'from' }}
         {...dataSource.wrapper}
         {...props}
