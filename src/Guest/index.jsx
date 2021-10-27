@@ -30,7 +30,7 @@ enquireScreen((b) => {
 
 const { location = {} } = typeof window !== 'undefined' ? window : {};
 
-export default class Home extends React.Component {
+export default class Guest extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
