@@ -1,18 +1,14 @@
 /**
  * @Author: shitao
  * @Date: 2021-10-24 13:04:55
- * @LastEditTime: 2021-10-24 13:35:27
+ * @LastEditTime: 2021-12-05 18:45:15
  * @LastEditors: shitao
  * @Description:
  * @FilePath: \ywhzapp\src\Business\Banner.jsx
  * @无锡四维时空信息科技有限公司
  */
 import React from "react";
-import { Button } from "antd";
-import { DownOutlined } from "@ant-design/icons";
-import QueueAnim from "rc-queue-anim";
-import TweenOne, { TweenOneGroup } from "rc-tween-one";
-import BannerAnim, { Element } from "rc-banner-anim";
+import { TweenOneGroup } from "rc-tween-one";
 import "rc-banner-anim/assets/index.css";
 
 

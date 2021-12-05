@@ -77,13 +77,8 @@ export const Banner10DataSource = {
         title: {
           className: 'banner1-title',
           children:
-            'https://zos.alipayobjects.com/rmsportal/HqnZZjBjWRbjyMr.png',
-        },
-        content: {
-          className: 'banner1-content',
-          children: '一个高效的页面动画解决方案',
-        },
-        button: { className: 'banner1-button', children: 'Learn More' },
+            '精益生产辅导服务商',
+        }
       },
       {
         name: 'elem2',
@@ -93,13 +88,8 @@ export const Banner10DataSource = {
         title: {
           className: 'banner1-title',
           children:
-            'https://zos.alipayobjects.com/rmsportal/HqnZZjBjWRbjyMr.png',
-        },
-        content: {
-          className: 'banner1-content',
-          children: '一个高效的页面动画解决方案',
-        },
-        button: { className: 'banner1-button', children: 'Learn More' },
+            '项目申报服务商',
+        }
       },
     ],
   },
