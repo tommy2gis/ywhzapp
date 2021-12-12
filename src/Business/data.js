@@ -1,12 +1,13 @@
 /*
  * @Author: shitao
  * @Date: 2021-12-05 18:30:42
- * @LastEditTime: 2021-12-05 18:58:28
+ * @LastEditTime: 2021-12-12 18:22:44
  * @LastEditors: shitao
  * @Description:
  * @FilePath: \ywhzapp\src\Business\data.js
  * 无锡四维时空信息科技有限公司
  */
+const defaultimg="data:image/png;base64,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";
 export const datas= [
   { title: "ISO9001", img: "/ywhzapp/images/iso9001.jpg",
   content: `<p>　　一、什么是ISO9001</p>
@@ -63,7 +64,7 @@ export const datas= [
   <p>经过内审和管理评审，组织如果确认其环境管理体系基本符合ISO14001标准要求，对组织适用性较好，且运行充分、有效，可向已获得中国环境管理体系认证机构认可委员会认可有认证资格的认证机构提出认证申请并签定认证合同，进入ISO14001环境管理体系认证审核阶段。</p>
   <p>认证审核是认证机构受组织委托，以第三方身份对组织的环境管理体系与ISO14001环境管理体系标准的符合性和运行、保持的有效性进行审核验证，并确定是否向组织发放认证证书的过程。</p>
   <p>为接受认证机构的认证审核，组织应做好充分准备，保持体系有效运行。认证机构会派出审核组，审核组将对组织实施认证审核。认证审核包括第一阶段审核和第二阶段现场审核。在组织完成第二阶段现场审核开具的不符合纠正并经过审核组验证关闭后，机构经过认证评定，将确定是否批准组织的认证注册和颁发认证证书。</p>
-  <p>认证证书有效期三年，三年内，组织要多次接受机构的监督审核；三年后，组织要申请复审，重新注册获得证书，此过程同第一次认证取证。</p>`, img: "/ywhzapp/images/iso14001.jpg" },
+  <p>认证证书有效期三年，三年内，组织要多次接受机构的监督审核；三年后，组织要申请复审，重新注册获得证书，此过程同第一次认证取证。</p>`, img: defaultimg },
   { title: "ISO45001", content: `　　<p>一、职业健康安全管理体系是什么</p>
   <p>　　iso45001职业健康安全管理体系是由英国标准协会(BSI)、挪威船级社(DNV)&nbsp;等13个组织于1999年联合推出的国际性标准，它是组织(企业)建立职业健康安全管理体系的基础，也是企业进行内审和认证机构实施认证审核的主要依据。它是继实施ISO9000、ISO14000国际标准之后的又一个热点。</p>
   <p>　　二、职业健康安全管理体系认证范围</p>
@@ -81,7 +82,7 @@ export const datas= [
   <p>　　3、使组织的职业健康安全管理由被动强制行为转变为主动自愿行为，提高职业健康安全管理水平;</p>
   <p>　　4、有助于消除贸易壁垒;</p>
   <p>　　5、对企业产生直接和间接的经济效益;</p>
-  <p>　　6、将在社会上树立企业良好的品质和形象。</p>`, img: "/ywhzapp/images/iso9001.jpg" },
+  <p>　　6、将在社会上树立企业良好的品质和形象。</p>`, img: defaultimg},
   { title: "ISO27001", content: `　　<p>一、什么是ISO27001认证</p>
   <p>　　信息安全管理体系是目前国际上最先进信息安全整体解决方案。它以组织风险评估为基石，运用PDCA过程方法和114项信息安全控制措施来帮助组织解决信息安合问题，实现信息安全目标。多运用于政府、电信、银行、金融、互联网等大型组织或者供应商的行为对项目风险管理起关键作用的项目。</p>
   <p>　　二、认证ISO27001的意义</p>
@@ -109,7 +110,7 @@ export const datas= [
   <p>　　5)、服务场所、多场所需提供清单;</p>
   <p>　　6)、管理手册、程序文件及组织机构图;</p>
   <p>　　7)、服务器数量以及终端数量;</p>
-  <p>　　8)、服务计划、服务报告、容量计划</p>`, img: "/ywhzapp/images/iso9001.jpg" },
+  <p>　　8)、服务计划、服务报告、容量计划</p>`, img: defaultimg},
   { title: "ISO20000", content: `　　<p>一、什么是ISO/IEC 20000</p>
   <p>　　采用PDCA管理模式作为持续改进模型的基础，将业务要求和客户要求作为最主要和出发点和最终的着陆点，通过对主要服务过程的有序化管理，促使业务成果和顾客满意的达成。</p>
   <p>　　作为认证组织的IT运营和服务管理水平的国际标准，多运用于政府、电信、银行、金融、互联网等大型组织或者供应商的行为对项目识别和管理IT服务的关键过程起关键作用的项目。</p>
@@ -148,7 +149,7 @@ export const datas= [
   <p>　　5.服务场所、多场所需提供清单;</p>
   <p>　　6.管理手册、程序文件及组织机构图;</p>
   <p>　　7.服务器数量以及终端数量;</p>
-  <p>　　8.服务计划、服务报告、容量计划</p>`, img: "/ywhzapp/images/iso9001.jpg" },
+  <p>　　8.服务计划、服务报告、容量计划</p>`, img: defaultimg},
   { title: "ISO22000", content: `　　<p>一、ISO22000食品卫生安全管理体系是什么</p>
   <p>　　HACCP体系是国际上共同认可和接受的食品安全保证体系，主要是对食品中微生物、化学和物理危害进行安全控制。联合国粮农组织和世界卫生组织上世纪80年代后期开始大力推荐这一食品安全管理体系。</p>
   <p>　　二、食品卫生安全体系认证材料</p>
@@ -166,7 +167,7 @@ export const datas= [
   <p>　　7、对必备方案进行系统化管理;</p>
   <p>　　8、由于关注最终结果，该标准适用范围广泛;</p>
   <p>　　9、 可以作为决策的有效依据;</p>
-  <p>　　10、 通过减少冗余的系统审计而节约资源。</p>`, img: "/ywhzapp/images/iso9001.jpg" },
+  <p>　　10、 通过减少冗余的系统审计而节约资源。</p>`, img: defaultimg},
   { title: "IATF16949", content: `<p>ISO/TS 16949标准源于汽车整车厂的要求，所以，并不是所有的组织都可以申请ISO/TS16949的认证注册。IATF16949：2016认证注册，只适用于汽车整车厂，汽车生产件及其服务件制造现场。这些制造现场生产的产品必须最终是用于整车制造，具有加工制造能力，并通过这种能力的实现使产品能够增值。这里的制造包括了：</p>
   <p>(1)生产材料；</p>
   <p>(2)生产或服务件；</p>
@@ -200,13 +201,13 @@ export const datas= [
   <p>（5）至少每12个月必须做一次监督审核。</p>
   <p>（6）当组织不按照规定的时间间隔进行监督审核，即启动认证撤消程序，认证机构在20天内确定是否需要对证书进行暂停，若进入暂停程序则最长期限是120天，之后进人证书撤销阶段。</p>
   <p>（7）换证复评审核日期不能超过初次现场审核结束日期+3年这个时间期限，证书的再次签发日期不能超过现有证书的有效期。</p>
-  <p>以上内容即是IATF关于IATF16949的认证要求。</p>`, img: "/ywhzapp/images/iso9001.jpg" },
+  <p>以上内容即是IATF关于IATF16949的认证要求。</p>`, img: defaultimg},
   { title: "CNAS17025", content: `<p>一、什么是CNAS17025认证？CNAS认证，为中国合格评定国家认可委员会(ChinaNationalAccreditationServiceforConformityAssessment，CNAS)的认证英文缩写，是在原中国认证机构国家认可委员会（CNAB）和中国实验室国家认可委员会(CNAL)基础上合并重组而成的。</p>
   <p>二、CNAS与17025的区别：</p>
   <p>2.1定义不同：ISO17025是实验室认可服务的国际标准，全称是ISO/IEC17025:2005-5-15《检测和校准实验室能力的通用要求》；CNAS是中国合格评定国家认可委员会，是根据《中华人民共和国认证认可条例》的规定，由国家认证认可监督管理委员会批准设立并授权的国家认可机构。</p>
   <p>2.2作用不同：ISO17025：（1）表明实验室具备了按有关国际准则开展校准/检测的技术能力；（2）增强实验室在校准/检测市场的竞争能力，赢得政府部门和社会各界的信任；（3）参与国际实验室认可双边、多边合作，得到更广泛的承认。CNAS：（1）按照我国有关法律法规、国际和国家标准、规范等，建立并运行合格评定机构国家认可体系，制定并发布认可工作的规则、准则、指南等规范性文件；（2）对境内外提出申请的合格评定机构开展能力评价，作出认可决定，并对获得认可的合格评定机构进行认可监督管理；2（3）负责对认可委员会徽标和认可标识的使用进行指导和监督管理；（4）组织开展与认可相关的人员培训工作，对评审人员进行资格评定和聘用管理。</p>
   <p>2.3认可机构不同：ISO17025：中国实验室国家认可委员会是我国唯一的实验室认可机构，承担全国所有实验室的ISO17025标准认可；中国认证机构国家认可委员会（CNAS）是经中国国家认证认可监督管理委员会依法授权设立的国家认可机构，负责对从事各类管理体系认证和产品认证的认证机构进行认证能力的资格认可。</p>
-  <p>三、实验室CNAS认可条件一览表:项目具体条件注意事项基本资料营业执照营业执照日期不要过期，是否参加年审实验室在所属企业的地位结构图实验室内部组织机构图实验室平面图实验室污水道管图如果有进行化学试验实验室建筑物合规性文件如：消防验收、建设工程竣工验收等人员要求具有实验室技术负责人其任职资格依据申请认可检测项目的要求进行确定具有实验室质量负责人其任职资格依据申请认可检测项目的要求进行确定具有实验室监督员其任职资格依据申请认可检测项目的要求进行确定具有实验室试验员其任职资格依据申请认可检测项目的要求进行确定具有授权签字人（至少两名）该人员可以由技术负责人或质量负责人进行兼职，其任职资格依据申请认可检测项目的要求进行确定。具有实验室样品管理员或文员等该人员可以由实验室内部的相关人员兼职具有内审员该人员可以由实验室内部的相关人员兼职，并颁发有华菱企管的培训资质证技术要求应列出所有申请认可检测项目的清单认可项目要与CNAS的检验项目领域代码相对应列出所有认可检测项目的试验方法最好是依据相应的国家标准、国际标准等，如GB，ISO，IEC、EN、ASTM等标准。如果采用企业标准需经CNAS专家进行评审认可所有的检测项目的试验方法应到当地的质监局进行标准查新目的是确认标准为最新版本，没有过期3仪器要求根据贵公司申请的认可业务范围，具备有检测能力的仪器，仪器的精度应能满足要求。仪器应有定期校验合格证书，且能进行有效的溯源硬件要求具备恒温恒湿的调节装置和监测仪器要根据测试标准中的规定和仪器的使用说明中规定进行防爆开关和防爆灯针对具有易燃易爆化学品的实验室烟雾报警器针对具有易易燃易爆化学品的实验室可燃性气体、二氧化碳泄漏及其它相关危害实验室人员的报警器针对有化学品的实验室洗眼及紧急喷淋装置针对有危学品的实验室灭火器根据消防法规的要求实施排风系统确保实验过程中有毒有害气体的排放废气排放的有组织排放装置根据实验室的活动决定实验人员的防护用品，如防护眼镜、面具、呼吸器等根据实验室的活动决定配备标准和数量设立样品的储存场所，如独立样品间等注意场所的空间，根据样品保留时间决定信息网络系统的建立便于实验室数据库的管理，如报告的查询、样品的接受等实验室应急安全出口设立根据消防法规的要求实施设立实验室工作人员的办公场所试验设备的独立物理区域（必要时）</p>`, img: "/ywhzapp/images/iso9001.jpg" },
+  <p>三、实验室CNAS认可条件一览表:项目具体条件注意事项基本资料营业执照营业执照日期不要过期，是否参加年审实验室在所属企业的地位结构图实验室内部组织机构图实验室平面图实验室污水道管图如果有进行化学试验实验室建筑物合规性文件如：消防验收、建设工程竣工验收等人员要求具有实验室技术负责人其任职资格依据申请认可检测项目的要求进行确定具有实验室质量负责人其任职资格依据申请认可检测项目的要求进行确定具有实验室监督员其任职资格依据申请认可检测项目的要求进行确定具有实验室试验员其任职资格依据申请认可检测项目的要求进行确定具有授权签字人（至少两名）该人员可以由技术负责人或质量负责人进行兼职，其任职资格依据申请认可检测项目的要求进行确定。具有实验室样品管理员或文员等该人员可以由实验室内部的相关人员兼职具有内审员该人员可以由实验室内部的相关人员兼职，并颁发有华菱企管的培训资质证技术要求应列出所有申请认可检测项目的清单认可项目要与CNAS的检验项目领域代码相对应列出所有认可检测项目的试验方法最好是依据相应的国家标准、国际标准等，如GB，ISO，IEC、EN、ASTM等标准。如果采用企业标准需经CNAS专家进行评审认可所有的检测项目的试验方法应到当地的质监局进行标准查新目的是确认标准为最新版本，没有过期3仪器要求根据贵公司申请的认可业务范围，具备有检测能力的仪器，仪器的精度应能满足要求。仪器应有定期校验合格证书，且能进行有效的溯源硬件要求具备恒温恒湿的调节装置和监测仪器要根据测试标准中的规定和仪器的使用说明中规定进行防爆开关和防爆灯针对具有易燃易爆化学品的实验室烟雾报警器针对具有易易燃易爆化学品的实验室可燃性气体、二氧化碳泄漏及其它相关危害实验室人员的报警器针对有化学品的实验室洗眼及紧急喷淋装置针对有危学品的实验室灭火器根据消防法规的要求实施排风系统确保实验过程中有毒有害气体的排放废气排放的有组织排放装置根据实验室的活动决定实验人员的防护用品，如防护眼镜、面具、呼吸器等根据实验室的活动决定配备标准和数量设立样品的储存场所，如独立样品间等注意场所的空间，根据样品保留时间决定信息网络系统的建立便于实验室数据库的管理，如报告的查询、样品的接受等实验室应急安全出口设立根据消防法规的要求实施设立实验室工作人员的办公场所试验设备的独立物理区域（必要时）</p>`, img: defaultimg},
   { title: "AS9100", content: `<p>AS9100航空航天质量体系认证</p>
   <p>虽然不同项目、领域中的质量管理都会遵循相同的质量原则，但是在不同行业之间，应用这些原则的方式可能会多种多样。每个行业都会有其自身的优先级、业务要求，因此不同行业都必须有其独特的方式或规定来应用质量原则。</p>
   <p>对于航空制造业来说，各种飞行器是该行业的输出产品，尤其是对于民航客机来说，每天在全球范围内要运送超过数百万的乘客，这就意味着客机在设计、生产、运行和维修等各个阶段都必须植入质量控制的理念。</p>
@@ -240,7 +241,7 @@ export const datas= [
   <p>工艺或模具变更；</p>
   <p>产线变更。</p>
   <p>在航空制造工业中，AS9102标准化了该行业供应商必须提供的文档，以满足首件鉴定的要求。AS9102规范可以简单的理解是为了客观证明生产或加工的零件是否满足所有的工程设计要求。</p>
-  <p>目前，很多航空制造商都要求其供应商进行AS9100注册。AS9100的实施可以向客户证明公司拥有良好的质量管理体系，换句话说就是向客户证明公司可以更好地满足客户的需求。</p>`, img: "/ywhzapp/images/iso9001.jpg" },
+  <p>目前，很多航空制造商都要求其供应商进行AS9100注册。AS9100的实施可以向客户证明公司拥有良好的质量管理体系，换句话说就是向客户证明公司可以更好地满足客户的需求。</p>`, img: defaultimg},
   { title: "GJB9001C", content: `<p>GJB9001C武器装备质量体系认证</p>
   <p><strong>申请GJB9001C-2017认证的组织可以是从事武器装备论证、研制、生产、试验和维修单位。武器装备是指实施和保障军事行动的武器、武器系统和军事技术器材，以及用于武器装备的计算机产品等（产品和服务属于武器装备总体、关键、重要分系统和核心配套产品，即列入国防科工局、发布的武器装备科研生产许可目录内的专业产品）需要进行强制性武器装备质量体系认证，许可目录之外的专用装备和一般配套性产品、军选民用产品不需要强制性武器装备质量体系认证。</strong></p>
   <p><strong>初次认证申请的组织，《申请书》需请军方用户签署认证推荐意见并盖章确认，同时填写《产品所在阶段情况调查表》。如该申请组织是部队，可由上级主管部门签字、盖章。对地方企业申请时，需有相关军代表出具《推荐意见书》，其内容包括：企业人员、技术、设备情况；产品质量状况；对配套企业，要注明产品与装备的关系(用在什么地方)；说明申请认证产品与推荐单位的关系。</strong></p>
@@ -262,6 +263,6 @@ export const datas= [
   <p>三年</p>
   <p><strong>审查方式：</strong></p>
   <p>付费审查、监审</p>
-  <p>来公司现场审查，初审一般会进行两次审查，即一阶段和二阶段，2-4个专家（根据申请范围、专业匹配），现场评价方式，会开具不符合项，提交整改报告和证明材料。</p>`, img: "/ywhzapp/images/iso9001.jpg" },
-  { title: "ISO26262", content: "", img: "/ywhzapp/images/iso9001.jpg" },
+  <p>来公司现场审查，初审一般会进行两次审查，即一阶段和二阶段，2-4个专家（根据申请范围、专业匹配），现场评价方式，会开具不符合项，提交整改报告和证明材料。</p>`, img: defaultimg},
+  { title: "ISO26262", content: "", img: defaultimg},
 ];

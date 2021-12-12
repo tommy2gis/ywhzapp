@@ -1,13 +1,13 @@
 /**
  * @Author: shitao
  * @Date: 2021-10-24 13:39:47
- * @LastEditTime: 2021-12-05 19:12:26
+ * @LastEditTime: 2021-12-12 18:46:24
  * @LastEditors: shitao
  * @Description:
  * @FilePath: \ywhzapp\src\Business\Content.jsx
  * @无锡四维时空信息科技有限公司
  */
-import React, { useState, useRef } from "react";
+import React, { useState, useRef,useEffect } from "react";
 import { Tabs, Card, List, Carousel, Button, Space } from "antd";
 import {datas} from './data'
 
@@ -18,20 +18,29 @@ const { TabPane } = Tabs;
 
 export default function Content() {
   const [detail, setdetail] = useState(null);
+  const [index, setindex] = useState(0);
   const carousel = useRef(null);
-  const showDetail = (item) => {
+  const showDetail = (item,index) => {
     setdetail(item);
+    setindex(index)
   };
+
+  useEffect(() => {
+    if(carousel.current){
+      carousel.current.goTo(index);
+    }
+    
+  }, [index])
   return (
     <div className="content_div">
-      <div className="breadcrumb">
+      <div id="breadcrumb" className="breadcrumb">
         <div style={{ fontSize: 20, fontWeight: 600 }}>业务范围</div>
         <div style={{ margin: 34 }}>{`当前位置：网站首页 > 业务范围`}</div>
       </div>
-      <div style={{ maxWidth: 1200, margin: "30px auto" }}>
+      <div  style={{ maxWidth: 1200, margin: "30px auto" }}>
         {detail ? (
-          <div>
-            <Carousel ref={carousel}>
+          <div >
+            <Carousel id="ant-carousel"  ref={carousel} >
              { datas.map(data => {
                 return <Card bordered={false}>
                  <Meta
@@ -47,6 +56,7 @@ export default function Content() {
               <Button
                 onClick={() => {
                   carousel.current.prev();
+                  document.getElementById("breadcrumb").scrollIntoView(true)
                 }}
               >
                 上一篇
@@ -54,6 +64,7 @@ export default function Content() {
               <Button
                 onClick={() => {
                   carousel.current.next();
+                  document.getElementById("breadcrumb").scrollIntoView(true)
                 }}
               >
                 下一篇
@@ -73,8 +84,8 @@ export default function Content() {
               <List
                 grid={{ gutter: 16, column: 4 }}
                 dataSource={datas}
-                renderItem={(item) => (
-                  <List.Item onClick={() => showDetail(item)}>
+                renderItem={(item,index) => (
+                  <List.Item onClick={() => showDetail(item,index)}>
                     <Card
                       hoverable
                       style={{ width: 240 }}
@@ -96,7 +107,7 @@ export default function Content() {
                 grid={{ gutter: 16, column: 4 }}
                 dataSource={[1, 2, 3, 4, 5, 6]}
                 renderItem={(item) => (
-                  <List.Item onClick={() => showDetail(item)}>
+                  <List.Item >
                     <Card
                       hoverable
                       style={{ width: 240 }}
@@ -118,7 +129,7 @@ export default function Content() {
                 grid={{ gutter: 16, column: 4 }}
                 dataSource={[1, 2, 3, 4, 5, 6]}
                 renderItem={(item) => (
-                  <List.Item onClick={() => showDetail(item)}>
+                  <List.Item >
                     <Card
                       hoverable
                       style={{ width: 240 }}

@@ -53,14 +53,14 @@ export default function Content() {
               </Card>
               <Card bordered={false}>
                 <Meta
-                  title="Europe Street beat3"
-                  description="www.instagram.com"
+                  title=""
+                  description=""
                 />
               </Card>
               <Card bordered={false}>
                 <Meta
-                  title="Europe Street beat4"
-                  description="www.instagram.com"
+                  title=""
+                  description=""
                 />
               </Card>
             </Carousel>

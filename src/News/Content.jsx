@@ -1,7 +1,7 @@
 /**
  * @Author: shitao
  * @Date: 2021-10-24 13:39:47
- * @LastEditTime: 2021-11-14 11:33:51
+ * @LastEditTime: 2021-12-12 18:45:12
  * @LastEditors: shitao
  * @Description:
  * @FilePath: \ywhzapp\src\News\Content.jsx
@@ -31,26 +31,26 @@ export default function Content() {
             <Carousel ref={carousel}>
               <Card bordered={false}>
                 <Meta
-                  title="新闻1"
-                  description="www.instagram.com"
+                  title=""
+                  description=""
                 />
               </Card>
               <Card bordered={false}>
                 <Meta
-                  title="新闻2"
-                  description="www.instagram.com"
+                  title=""
+                  description=""
                 />
               </Card>
               <Card bordered={false}>
                 <Meta
-                  title="Europe Street beat3"
-                  description="www.instagram.com"
+                  title=""
+                  description=""
                 />
               </Card>
               <Card bordered={false}>
                 <Meta
-                  title="Europe Street beat4"
-                  description="www.instagram.com"
+                  title=""
+                  description=""
                 />
               </Card>
             </Carousel>
