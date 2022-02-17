@@ -1,7 +1,7 @@
 /**
  * @Author: shitao
  * @Date: 2021-10-19 21:21:50
- * @LastEditTime: 2021-10-24 12:44:22
+ * @LastEditTime: 2022-02-17 19:42:23
  * @LastEditors: shitao
  * @Description:
  * @FilePath: \ywhzapp\src\Home\Footer1.jsx
@@ -46,14 +46,14 @@ class Footer extends React.Component {
                           无锡市新吴区天安智慧城A2-1002
                         </Descriptions.Item>
                         <Descriptions.Item label="手机">
-                          19952755276
+                          19952755276,15358000212
                         </Descriptions.Item>
                       </Descriptions>
                     </div>
                     <div>
                       <Descriptions column={1}>
                         <Descriptions.Item label="邮箱">
-                          winwaya@vip.126.com
+                          winway@vip.126.com
                         </Descriptions.Item>
                         <Descriptions.Item label="QQ">
                           472180111

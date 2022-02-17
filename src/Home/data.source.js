@@ -29,7 +29,7 @@ export const Nav00DataSource = {
         href: '/',
         children: {
           href: '/guest',
-          children: [{ children: '客户案例', name: 'text',link:'/' }],
+          children: [{ children: '客户展示', name: 'text',link:'/' }],
         },
       },
       {

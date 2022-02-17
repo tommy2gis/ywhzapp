@@ -1,7 +1,7 @@
 /**
  * @Author: shitao
  * @Date: 2021-10-24 13:04:55
- * @LastEditTime: 2021-10-26 21:52:16
+ * @LastEditTime: 2022-02-17 19:44:06
  * @LastEditors: shitao
  * @Description:
  * @FilePath: \ywhzapp\src\Guest\Banner.jsx
@@ -34,7 +34,7 @@ class Banner extends React.PureComponent {
                   className="banner1-title"
                   style={{fontSize:46,width:800,letterSpacing:2,marginTop:70}}
                 >
-                  帮助企业梳理核心流程，聚焦核心过程和增值过程促进管理流程优化，提升企业管理效率
+                  
                 </div>
               </div>
             </div>

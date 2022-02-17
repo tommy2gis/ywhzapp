@@ -1,7 +1,7 @@
 /**
  * @Author: shitao
  * @Date: 2021-10-24 13:39:47
- * @LastEditTime: 2021-11-14 10:41:56
+ * @LastEditTime: 2022-02-17 19:49:52
  * @LastEditors: shitao
  * @Description:
  * @FilePath: \ywhzapp\src\Contact\Content.jsx
@@ -46,27 +46,24 @@ export default function Content() {
           dataSource={[
             {
               name: "华南分公司",
-              QQ: "472180111",
-              tel: "19952755276",
-              contact: "谭老师",
-              email: "winwaya@vip.126.com",
-              address: "无锡市新吴区天安智慧城A2-1002",
+              tel: "13612928678",
+              contact: "吴经理",
+              email: "winway@vip.126.com",
+              address: "深圳市龙华区龙华街道清华社区建设东路青年创业园C栋2层213",
             },
             {
               name: "华中分公司",
-              QQ: "472180111",
-              tel: "19952755276",
-              contact: "谭老师",
-              email: "winwaya@vip.126.com",
-              address: "无锡市新吴区天安智慧城A2-1002",
+              tel: "15116423684",
+              contact: "谭经理",
+              email: "winway@vip.126.com",
+              address: "湖南省长沙市岳麓区麓谷街道麓谷信息港A座1802室",
             },
             {
               name: "西南分公司",
-              QQ: "472180111",
-              tel: "19952755276",
-              contact: "谭老师",
-              email: "winwaya@vip.126.com",
-              address: "无锡市新吴区天安智慧城A2-1002",
+              tel: "15358000212",
+              contact: "谭经理",
+              email: "winway@vip.126.com",
+              address: "成都市双流区剑南大道南段2688号中海右岸三期",
             },
           ]}
           renderItem={(item) => (
@@ -77,8 +74,7 @@ export default function Content() {
                 title={item.name}
               >
                 <Meta
-                  title="ISO9001"
-                  description="运帷汇质致力于协助中国制造成功升级，致力于实现中华民族伟大复兴"
+                  description={item.address}
                 />
               </Card>
             </List.Item>
@@ -94,9 +90,8 @@ export default function Content() {
         onCancel={handleCancel}
       >
         <Descriptions column={1}>
-            <Descriptions.Item label="联系人">{showitem?showitem.name:""}</Descriptions.Item>
+            <Descriptions.Item label="联系人">{showitem?showitem.contact:""}</Descriptions.Item>
             <Descriptions.Item label="手机">{showitem?showitem.tel:""}</Descriptions.Item>
-            <Descriptions.Item label="QQ">{showitem?showitem.QQ:""}</Descriptions.Item>
             <Descriptions.Item label="邮箱">{showitem?showitem.email:""}</Descriptions.Item>
             <Descriptions.Item label="地址">
             {showitem?showitem.address:""}
